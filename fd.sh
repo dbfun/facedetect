@@ -6,7 +6,7 @@ size=$3
 ratio=30
 let i=1
 
-/home/vagun/bin/facedetect -o "tmp/test.jpg" "$src" | while read x y w h; do
+facedetect -o "tmp/test.jpg" "$src" | while read x y w h; do
   let x1=$x-$w*$ratio/100
   let y1=$y-$h*$ratio/100
   let w1=$w+$w*$ratio*2/100
